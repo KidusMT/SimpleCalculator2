@@ -1,11 +1,12 @@
-# SimpleCalculator1
+# SimpleCalculator2
 JSP and Servlets
 
 Addition and Multiplication:
 
-![image](https://user-images.githubusercontent.com/18373774/117297244-991c3c00-ae3b-11eb-8bc6-124b6967b60b.png)
+![image](https://user-images.githubusercontent.com/18373774/117328982-cbd52d00-ae59-11eb-9173-ce0b2df36ba7.png)
 
 Result:
 
-![image](https://user-images.githubusercontent.com/18373774/117297163-8275e500-ae3b-11eb-808a-f8da9010571c.png)
+![image](https://user-images.githubusercontent.com/18373774/117329032-d8598580-ae59-11eb-9428-2c417fd45b8f.png)
+
 
