@@ -15,14 +15,12 @@ public class Calculator extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        super.doGet(req, resp);
         String addOp1 = req.getParameter("addOp1");
         String addOp2 = req.getParameter("addOp2");
 
         String multiOp1 = req.getParameter("multiOp1");
         String multiOp2 = req.getParameter("multiOp2");
 
-//        resp.setContentType("text/plain");
         PrintWriter out = resp.getWriter();
         out.println("<!DOCTYPE html>");
         out.println("<html lang='en'>");
@@ -39,7 +37,6 @@ public class Calculator extends HttpServlet {
         out.println("<div style='display: inline-flex; flex-direction: column'>");
         out.println("    <div style='display: inline-flex; flex-direction: row'>");
 
-
         if (addOp1 != null && addOp2 != null && !addOp1.isEmpty() && !addOp2.isEmpty()) {
 
             out.println("        <input name='addOp1' type='number' value='" + addOp1 + "'>");
@@ -50,14 +47,10 @@ public class Calculator extends HttpServlet {
             int addResult = Integer.parseInt(addOp1) + Integer.parseInt(addOp2);
             System.out.println("===> add result: " + addResult);
 
-//            String addData = String.format("%s + %s = %s", addOp1, addOp2, addResult);
-//            req.setAttribute("addResp", addData);
-
             out.println("        <input type='text' value='" + addResult + "' />");
 
         } else {
             System.out.println("===> add result: ELSE");
-//            req.setAttribute("addResp", "");
             out.println("        <input type='text' value='' />");
         }
         out.println("    </div>");
@@ -72,14 +65,9 @@ public class Calculator extends HttpServlet {
             out.println("        <input name='multiOp2' type='number' value='" + multiOp2 + "'>");
             out.println("        <pre> = </pre>");
 
-
-//            String multiData = String.format("%s * %s = %s", multiOp1, multiOp2, multiResult);
-//            req.setAttribute("multiResp", multiData);
             out.println("        <input type='text' value='" + multiResult + "' />");
-//            out.println("        <input type='text' value='<%=(String)request.getParameter('multiResp')==null? '': (String)request.getParameter('addResp')%>' />");
         } else {
             System.out.println("===> multi result: ELSE");
-//            req.setAttribute("multiResp", "");
             out.println("        <input type='text' value='' />");
         }
 
@@ -93,6 +81,5 @@ public class Calculator extends HttpServlet {
         out.println("</div>");
         out.println("</body>");
         out.println("</html>");
-//        req.getRequestDispatcher("result.jsp").forward(req, resp);
     }
 }

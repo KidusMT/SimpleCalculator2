@@ -10,11 +10,12 @@
     <form action="/SimpleCalculator2_war_exploded/calc" method="get">
         <div style="display: inline-flex; flex-direction: column">
             <div style="display: inline-flex; flex-direction: row">
-                <input name="addOp1" type="number" >
+                <input name="addOp1" type="number">
                 <pre> + </pre>
                 <input name="addOp2" type="number">
                 <pre> = </pre>
-                <input type="text" value='<%=(String)request.getParameter("addResp")==null? "": (String)request.getParameter("addResp")%>' />
+                <input type="text"
+                       value='<%=request.getParameter("addResp")==null? "": (String)request.getParameter("addResp")%>'/>
             </div>
             <br>
             <div style="display: inline-flex; flex-direction: row">
@@ -22,7 +23,8 @@
                 <pre> * </pre>
                 <input name="multiOp2" type="number">
                 <pre> = </pre>
-                <input type="text" value='<%=(String)request.getParameter("multiResp")==null? "": (String)request.getParameter("addResp")%>' />
+                <input type="text"
+                       value='<%=request.getParameter("multiResp")==null? "": (String)request.getParameter("addResp")%>'/>
             </div>
         </div>
         <br>
@@ -31,6 +33,5 @@
         </div>
     </form>
 </div>
-
 </body>
 </html>
